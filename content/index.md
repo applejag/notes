@@ -1,5 +1,10 @@
-# Emanote Template
+# Kalle's notes
 
-A template for your next [Emanote] website for hosting in [[GitHub Pages]], editing in [Visual Studio Code](https://emanote.srid.ca/resources/vscode), etc.. For details, see https://github.com/srid/emanote-template.
+My personal notes of stuff worth remembering.
 
-[Emanote]: https://emanote.srid.ca/
+Made by:
+
+- using [Emanote](https://emanote.srid.ca/) for rendering, based on the [emanote-template](https://github.com/srid/emanote-template)
+- using GitHub Pages for hosting
+- using [zk](https://github.com/mickael-menu/zk) and [neovim](https://neovim.io/) for editing
+
