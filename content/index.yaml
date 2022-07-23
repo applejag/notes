@@ -9,16 +9,17 @@ page:
 
 template:
   theme: red
+  baseUrl: / # overridden in ../.deploy/github/index.yaml
 
   # You can add your own variables here, like editBaseUrl.
   # See after-note.tpl to see where editBaseUrl gets used.
   editBaseUrl: https://github.com/jilleJr/notes/blob/master/content
 
-  # Sets neuron-style pages
-  name: /templates/layouts/note
-  layout:
-    note:
-      containerClass: container mx-auto max-w-screen-lg
+  # Uncomment to set neuron-style pages
+  #name: /templates/layouts/note
+  #layout:
+  #  note:
+  #    containerClass: container mx-auto max-w-screen-lg
 
   sidebar:
     collapsed: false
