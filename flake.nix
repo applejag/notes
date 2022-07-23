@@ -21,7 +21,7 @@
           sites."default" = {
             path = ./content;
             pathString = "./content";
-            # port = 8080;
+            port = 8080;
             # baseUrl = "/mynotes";
             # prettyUrls = true;
           };

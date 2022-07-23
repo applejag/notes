@@ -2,20 +2,23 @@
 # https://github.com/srid/emanote/blob/master/default/index.yaml
 
 page:
-  siteTitle: Emanote Template
+  siteTitle: Kalle's notes
+  headHtml: |
+    <link href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-tomorrow.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/combine/npm/prismjs@1.23.0/prism.min.js,npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js"></script>
 
 template:
   theme: red
 
   # You can add your own variables here, like editBaseUrl.
   # See after-note.tpl to see where editBaseUrl gets used.
-  editBaseUrl: https://github.com/srid/emanote-template/edit/master/content
+  editBaseUrl: https://github.com/jilleJr/notes/blob/master/content
 
-  # Uncomment this to get neuron-style pages
-  # name: /templates/layouts/note
-  # layout:
-  #   note:
-  #     containerClass: container mx-auto max-w-screen-lg
+  # Sets neuron-style pages
+  name: /templates/layouts/note
+  layout:
+    note:
+      containerClass: container mx-auto max-w-screen-lg
 
   sidebar:
     collapsed: false

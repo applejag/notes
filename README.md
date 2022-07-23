@@ -5,7 +5,7 @@ My personal notes, rendered via [Emanote](https://emanote.srid.ca/)
 ## Running using Emanote
 
 ```sh
-emanote run
+emanote run -L ./content
 ```
 
 ## Running using Nix
@@ -28,7 +28,7 @@ To build the static website via Nix:
 ```sh
 nix build -o ./result
 # Then test it:
-nix run nixpkgs#nodePackages.live-server -- ./result
+nix run 'nixpkgs#nodePackages.live-server' -- ./result
 ```
 
 ## GitHub Pages
