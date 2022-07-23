@@ -1,2 +1,2 @@
-template:
-  baseUrl: /notes/
+template: {}
+  #baseUrl: /notes/
