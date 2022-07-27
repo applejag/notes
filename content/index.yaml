@@ -4,6 +4,7 @@
 page:
   siteTitle: Kalle's notes
   headHtml: |
+    <snippet var="js.mathjax" />
     <snippet var="js.mermaid" />
     <snippet var="js.prism" />
 
