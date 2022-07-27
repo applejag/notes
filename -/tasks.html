@@ -18,7 +18,18 @@
       <base href='/' />
       <link href='favicon.svg' rel='icon' />
     
-    <!-- mermaid.js --><script src='https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js'></script>
+    <script>
+  window.MathJax = {
+    startup: {
+      ready: () => {
+        MathJax.startup.defaultReady();
+      }
+    }
+  };
+</script>
+<script async id='MathJax-script' src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'></script>
+
+<!-- mermaid.js --><script src='https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js'></script>
 <script>
   mermaid.initialize({startOnLoad:false});
   mermaid.init(undefined,document.querySelectorAll(".mermaid"));
@@ -30,7 +41,7 @@
 
 
   
-  <link href='tailwind.css?instanceId=6a3355d1-5ac0-4fb0-8f76-f8440f91ccb1' rel='stylesheet' type='text/css' />
+  <link href='tailwind.css?instanceId=7740fb93-42c8-4611-ab87-06336a622dd0' rel='stylesheet' type='text/css' />
 
   <!-- Heist error element -->
   <style>
@@ -99,6 +110,159 @@
           
     <div class='w-full bg-gray-300'>
       <div class='w-full px-3 py-1'>
+        
+          
+            <section class='mt-4 mb-6'>
+              <div class='mt-1 mb-2 py-0.5 px-1 rounded flex flex-row-reverse'>
+                
+
+                <div class='flex-1'>
+                  <a class='font-bold text-red-700  hover:underline' href=''>
+                    Kalle’s notes
+                  </a>
+                </div>
+              </div>
+              <div class>
+                
+                  
+                    <div class='bg-white py-1.5 px-2 my-1 rounded shadow border-2 hover:border-red-600'>
+                      <svg xmlns='http://www.w3.org/2000/svg' class='inline h-4 w-4 mb-1 text-gray-600 stroke-current' fill='none' viewBox='0 0 28 28'><desc>☐</desc><rect stroke-width='3' x='2' y='2' width='24' height='24' rx='3'></rect></svg>
+<span>
+  
+                        TODO: Write how to phrase notes. This is for me after all.
+                      
+</span>
+
+                    </div>
+                  
+                    <div class='bg-white py-1.5 px-2 my-1 rounded shadow border-2 hover:border-red-600'>
+                      <svg xmlns='http://www.w3.org/2000/svg' class='inline h-4 w-4 mb-1 text-gray-600 stroke-current' fill='none' viewBox='0 0 28 28'><desc>☐</desc><rect stroke-width='3' x='2' y='2' width='24' height='24' rx='3'></rect></svg>
+<span>
+  
+                        TODO: Remove all tags I had before. They’re used weirdly
+                      
+</span>
+
+                    </div>
+                  
+                
+              </div>
+            </section>
+          
+            <section class='mt-4 mb-6'>
+              <div class='mt-1 mb-2 py-0.5 px-1 rounded flex flex-row-reverse'>
+                
+                  
+                    <li class='inline-flex items-center'>
+                      <a class='text-gray-900 opacity-50 hover:opacity-100' href=''>
+                        Kalle’s notes
+                      </a>
+                      <span class='text-gray-700 px-2'>\</span>
+                    </li>
+                  
+                    <li class='inline-flex items-center'>
+                      <a class='text-gray-900 opacity-50 hover:opacity-100' href='people'>
+                        people
+                      </a>
+                      <span class='text-gray-700 px-2'>\</span>
+                    </li>
+                  
+                    <li class='inline-flex items-center'>
+                      <a class='text-gray-900 opacity-50 hover:opacity-100' href='people/juval-lowy'>
+                        Juval Löwy
+                      </a>
+                      <span class='text-gray-700 px-2'>\</span>
+                    </li>
+                  
+                    <li class='inline-flex items-center'>
+                      <a class='text-gray-900 opacity-50 hover:opacity-100' href='people/juval-lowy/righting-software'>
+                        Righting software
+                      </a>
+                      <span class='text-gray-700 px-2'>\</span>
+                    </li>
+                  
+                    <li class='inline-flex items-center'>
+                      <a class='text-gray-900 opacity-50 hover:opacity-100' href='people/juval-lowy/righting-software/volatility-decomposition'>
+                        Volatility decomposition
+                      </a>
+                      <span class='text-gray-700 px-2'>\</span>
+                    </li>
+                  
+                
+
+                <div class='flex-1'>
+                  <a class='font-bold text-red-700  hover:underline' href='people/juval-lowy/righting-software/volatility-decomposition/finding-a-systems-components'>
+                    Finding a system’s components
+                  </a>
+                </div>
+              </div>
+              <div class>
+                
+                  
+                    <div class='bg-white py-1.5 px-2 my-1 rounded shadow border-2 hover:border-red-600'>
+                      <svg xmlns='http://www.w3.org/2000/svg' class='inline h-4 w-4 mb-1 text-gray-600 stroke-current' fill='none' viewBox='0 0 28 28'><desc>☐</desc><rect stroke-width='3' x='2' y='2' width='24' height='24' rx='3'></rect></svg>
+<span>
+  
+                        TODO: Write about song of the siren, or remove
+                      
+</span>
+
+                    </div>
+                  
+                
+              </div>
+            </section>
+          
+            <section class='mt-4 mb-6'>
+              <div class='mt-1 mb-2 py-0.5 px-1 rounded flex flex-row-reverse'>
+                
+                  
+                    <li class='inline-flex items-center'>
+                      <a class='text-gray-900 opacity-50 hover:opacity-100' href=''>
+                        Kalle’s notes
+                      </a>
+                      <span class='text-gray-700 px-2'>\</span>
+                    </li>
+                  
+                    <li class='inline-flex items-center'>
+                      <a class='text-gray-900 opacity-50 hover:opacity-100' href='politics'>
+                        politics
+                      </a>
+                      <span class='text-gray-700 px-2'>\</span>
+                    </li>
+                  
+                    <li class='inline-flex items-center'>
+                      <a class='text-gray-900 opacity-50 hover:opacity-100' href='politics/copyright'>
+                        copyright
+                      </a>
+                      <span class='text-gray-700 px-2'>\</span>
+                    </li>
+                  
+                
+
+                <div class='flex-1'>
+                  <a class='font-bold text-red-700  hover:underline' href='politics/copyright/international-copyrights'>
+                    International copyrights
+                  </a>
+                </div>
+              </div>
+              <div class>
+                
+                  
+                    <div class='bg-white py-1.5 px-2 my-1 rounded shadow border-2 hover:border-red-600'>
+                      <svg xmlns='http://www.w3.org/2000/svg' class='inline h-4 w-4 mb-1 text-gray-600 stroke-current' fill='none' viewBox='0 0 28 28'><desc>☐</desc><rect stroke-width='3' x='2' y='2' width='24' height='24' rx='3'></rect></svg>
+<span>
+  
+                        TODO
+                      
+</span>
+
+                    </div>
+                  
+                
+              </div>
+            </section>
+          
         
       </div>
     </div>
