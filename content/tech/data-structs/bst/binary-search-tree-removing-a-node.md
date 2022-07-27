@@ -80,7 +80,7 @@ graph TD
 ## Parent of 2
 
 Here it gets a little more complicated as we need to conform to the rules
-defined for a [[binary-search-tree]].
+defined for a [[bst]].
 
 The algorithm goes: Promote the *leftmost node* of the *right node*.
 

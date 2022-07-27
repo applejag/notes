@@ -20,7 +20,7 @@ designing using [[functional-decomposition]].
 Volatility-based decomposition is hard work, and function-based decomposition is
 easy, ergo it's utterly easy to procastinate your design process by doing
 functional decomposition. In this case, [[functional-decomposition]]# is the
-[[song-of-the-siren]]#.
+"Song of the siren".
 
 > "Tie yourself to the mast and sing, loudly,
 >
