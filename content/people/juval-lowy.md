@@ -1,7 +1,7 @@
 ---
 date: 2021-01-28T19:03
 tags: 
-  - books/author
+  - book/author
 ---
 
 # Juval Löwy

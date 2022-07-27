@@ -1,7 +1,7 @@
 ---
 date: 2021-01-30T16:29
 tags: 
-  - books/righting-software
+  - book
 ---
 
 # Righting software
