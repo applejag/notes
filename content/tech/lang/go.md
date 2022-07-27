@@ -7,5 +7,9 @@ tags:
 # Go
 
 ```query
+tag: lang/go/author
+```
+
+```query
 path: ./*
 ```

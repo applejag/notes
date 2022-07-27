@@ -9,7 +9,7 @@ tags:
 
 ## Known for
 
-- Inventing the [[go]]# programming language.
+- Co-author of [[go]]#.
 
 ## Famous quotes
 
