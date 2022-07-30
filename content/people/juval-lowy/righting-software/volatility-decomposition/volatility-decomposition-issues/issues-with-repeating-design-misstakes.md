@@ -13,8 +13,7 @@ again and again.
 
 ## Einsteins famous quote
 
-> "The definition of insanity is doing the same thing over and over again and
-> expecting a different result." --- *[[albert-einstein]]*
+> [[definition-of-insanity|"The definition of insanity is doing the same thing over and over again and expecting a different result."]]
 
 If you're tasked with creating the architecture for a reboot of a project that
 died because it was too difficult to maintain, integrate, and develop further,
