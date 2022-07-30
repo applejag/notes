@@ -5,15 +5,15 @@
   <meta charset='UTF-8' />
   <meta name='viewport' content='width=device-width, initial-scale=1' />
   <title>
-    BST – Kalle's notes
+    Allure of the free lunch – Kalle's notes
   </title>
   
     
-      <meta property='og:description' content='Short for: Binary Search Tree' />
+      <meta property='og:description' content='This is a common phrase told by ([[juval-lowy]],[]). In other words: There is no such thing as a free lunch, or You cannot add value without sweating (J. Löwy, January 27, 2021).' />
       <meta property='og:site_name' content="Kalle's notes" />
       <meta property='og:image' content />
       <meta property='og:type' content='website' />
-      <meta property='og:title' content='BST' />
+      <meta property='og:title' content='Allure of the free lunch' />
     
     
       <base href='/' />
@@ -123,17 +123,8 @@
             </li>
           
             <li class='inline-flex items-center'>
-              <a class='px-1 font-bold' href='tech'>
-                Tech/IT
-              </a>
-              <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
-                <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
-              </svg>
-            </li>
-          
-            <li class='inline-flex items-center'>
-              <a class='px-1 font-bold' href='tech/data-structs'>
-                Data structures
+              <a class='px-1 font-bold' href='quotes'>
+                quotes
               </a>
               <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
                 <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
@@ -270,7 +261,11 @@
     
       <!-- Variable bindings for this tree-->
   
-  
+    
+      
+      
+    
+
 
 
   
@@ -288,7 +283,7 @@
       </svg>
       
   
-    <a class='font-bold text-red-600 hover:underline truncate' title='BST' href='tech/data-structs/bst'>
+    <a class='font-bold hover:underline truncate' title='BST' href='tech/data-structs/bst'>
       BST
     </a>
     
@@ -3077,11 +3072,7 @@
     
       <!-- Variable bindings for this tree-->
   
-    
-      
-    
-    
-
+  
 
 
   
@@ -3094,12 +3085,12 @@
     
     
       <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z'>
         </path>
       </svg>
-    
+      
   
-    <a class='hover:underline truncate' title='Allure of the free lunch' href='quotes/allure-of-the-free-lunch'>
+    <a class='font-bold text-red-600 hover:underline truncate' title='Allure of the free lunch' href='quotes/allure-of-the-free-lunch'>
       Allure of the free lunch
     </a>
     
@@ -3204,93 +3195,64 @@
           <main class='px-4 py-4'>
             <h1 class='flex items-end justify-center mb-4 p-3 bg-red-100 text-5xl font-extrabold text-black rounded'>
   <a class='z-40 tracking-tighter '>
-    BST
+    Allure of the free lunch
   </a>
 </h1>
             <article class='overflow-auto'>
   <!-- What goes in this file will appear on top of note body-->
   
     <p class='mb-3'>
-      Short for: Binary Search Tree
+      This is a common phrase told by <a href='people/juval-lowy' class='text-red-600 mavenLinkBold hover:underline' data-wikilink-type='WikiLinkTag'>Juval Löwy</a>. In other words: <em>“There is no such thing as a free lunch”</em>, or <em>“You cannot add value without sweating”</em> (J. Löwy, January 27, 2021).
+    </p>
+  
+    <blockquote class='py-0.5 px-4 mb-3 italic border-l-4 bg-gray-50 text-gray-600 border-gray-400 quote'>
+      
+    <p class='mb-3'>
+      “Nothing worse than responding <em>‘We will fix it. No sweat!’</em>”
+    </p>
+  
+    </blockquote>
+  <h2 id='first-law-of-thermodynamics' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>First law of thermodynamics</h2>
+    <p class='mb-3'>
+      The first law of thermodynamics is about the conservation of energy, meaning that no energy can be created nor destroyed; energy can only be transformed.
     </p>
   
     <p class='mb-3'>
-      Data structure is made up of nodes. Usually looks something like this:
+      In simpler terms: Energy cannot be created out of thin air. To get some output, you must give it some input.
     </p>
-  <div class='py-0.5 mb-3 text-sm'><pre><code class='fsharp language-fsharp'>type bstNode&lt;'T&gt; =
-  { Value: 'T
-    Left: bstNode&lt;'T&gt; option
-    Right: bstNode&lt;'T&gt; option }</code></pre></div><h2 id='rules' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Rules</h2>
+  
+    <p class='mb-3'>
+      Or in other words: <em>You cannot add value without sweating.</em>
+    </p>
+  <h2 id='alchemists' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Alchemists</h2>
+    <p class='mb-3'>
+      Alchemism is an old profession to turn dirt into gold. This has never been proven by anyone, and yet there was enourmous amount of resources put into the subject by any lord and country to hire alchemists to turn dirt into gold.
+    </p>
+  
+    <p class='mb-3'>
+      It can be suggested that it is in our nature to find the “silver bullet” that will make us rich without working.
+    </p>
+  
+    <p class='mb-3'>
+      Doing <a href='people/juval-lowy/righting-software/functional-decomposition' class='text-red-600 mavenLinkBold hover:underline' data-wikilink-type='WikiLinkTag'>Functional decomposition</a> is equivalent to the olden alchemists, and is therefore why it will be increadibly difficult (if not impossible) to convince your teammates that functional decomposition is bad.
+    </p>
+  <h2 id='the-most-famous-alchemist-of-them-all' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>The most famous alchemist of them all</h2>
+    <p class='mb-3'>
+      Isaac Newton spent years of his life searching for the philosophers stone, just because of the allure of the free lunch.
+    </p>
+  <h2 id='references' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>References</h2>
     <ul class='my-3 ml-6 space-y-1 list-disc'>
       
         <li>
-          Every node can have up to 2 children. No more.
-        </li>
-      
-        <li>
-          Every node in the <code class='py-0.5 px-0.5 bg-gray-100'>.Left</code> branch has a lower value than <code class='py-0.5 px-0.5 bg-gray-100'>.Value</code>
-        </li>
-      
-        <li>
-          Every node in the <code class='py-0.5 px-0.5 bg-gray-100'>.Right</code> branch has a higher (or equal) value than <code class='py-0.5 px-0.5 bg-gray-100'>.Value</code>
-        </li>
-      
-        <li>
-          Every node is immutable
+          J. Löwy (January 27, 2021), <em>“Righting Software - System Design”</em> [Workshop], NDC London 2021.
         </li>
       
     </ul>
-  <h2 id='benefits' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Benefits</h2>
-    <p class='mb-3'>
-      Main benefit is the speed of operations.
-    </p>
-  <table class='mb-3'><thead><tr class='border-b-2 border-t-2 border-gray-300'><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Operation</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Average</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Worst</th></tr></thead><tbody><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Add</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><span class='math inline'>\(O(\log n)\)</span></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><span class='math inline'>\(O(n)\)</span></td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Remove</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><span class='math inline'>\(O(\log n)\)</span></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><span class='math inline'>\(O(n)\)</span></td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Find</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><span class='math inline'>\(O(\log n)\)</span></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><span class='math inline'>\(O(n)\)</span></td></tr></tbody></table><h2 id='terminology' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Terminology</h2>
-    <ul class='my-3 ml-6 space-y-1 list-disc'>
-      
-        <li>
-          
-    <p class='mb-3'>
-      A container of a single value and pointers to the next containers is called a <em>“node”</em>.
-    </p>
   
-        </li>
-      
-        <li>
-          
-    <p class='mb-3'>
-      The nodes referenced by a node are called <em>“child nodes”</em> and <em>“parent nodes”</em>
-    </p>
-  
-        </li>
-      
-        <li>
-          
-    <p class='mb-3'>
-      The <code class='py-0.5 px-0.5 bg-gray-100'>D</code> node lacks parent, and is therefore called the <em>“root node”</em>.
-    </p>
-  
-        </li>
-      
-        <li>
-          
-    <p class='mb-3'>
-      The <code class='py-0.5 px-0.5 bg-gray-100'>A</code>, <code class='py-0.5 px-0.5 bg-gray-100'>C</code>, <code class='py-0.5 px-0.5 bg-gray-100'>E</code>, <code class='py-0.5 px-0.5 bg-gray-100'>G</code> nodes lacks children, and is therefore are called the <em>“leaf nodes”</em>.
-    </p>
-  
-        </li>
-      
-    </ul>
-  <div class='py-0.5 mb-3 text-sm'><pre><code class='mermaid language-mermaid'>graph TD
-    D==&gt;B
-    D==&gt;F
-    B==&gt;A
-    B==&gt;C
-    F==&gt;E
-    F==&gt;G</code></pre></div>
   <div class='flex items-center justify-center mt-2'>
   
     
-      <a class='text-gray-300 hover:text-red-600 text-sm' title='Edit this page on GitHub' href='https://github.com/jilleJr/notes/blob/master/content/tech/data-structs/bst.md'>
+      <a class='text-gray-300 hover:text-red-600 text-sm' title='Edit this page on GitHub' href='https://github.com/jilleJr/notes/blob/master/content/quotes/allure-of-the-free-lunch.md'>
         <svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
           <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z'></path>
         </svg>
@@ -3307,14 +3269,44 @@
     <ul class='space-y-1'>
       
         <li>
-          <a class='text-red-600 mavenLinkBold hover:bg-red-50' href='tech/data-structs/bst/binary-search-tree-removing-a-node'>
-            BST - Removing a node
+          <a class='text-red-600 mavenLinkBold hover:bg-red-50' href='people/juval-lowy/righting-software/volatility-decomposition'>
+            Volatility decomposition
           </a>
           
             <div class='mb-4 overflow-auto text-sm text-gray-500'>
   
     <div class='pl-2 mt-2 border-l-2 border-red-200 hover:border-red-500'>
-      <div><p>Here it gets a little more complicated as we need to conform to the rules defined for a <a href='tech/data-structs/bst' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>BST</a>.</p></div>
+      <div><p>But make no misstake. This is no <em>“silver bullet”</em>. As Löwy puts it, <em>“You cannot add value without sweating”</em> (<a href='quotes/allure-of-the-free-lunch' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkBranch'>Allure of the free lunch</a>), and doing volatility decomposition requires you to toil and <em>sweat</em> a lot.</p></div>
+    </div>
+  
+</div>
+          
+        </li>
+      
+        <li>
+          <a class='text-red-600 mavenLinkBold hover:bg-red-50' href='people/juval-lowy'>
+            Juval Löwy
+          </a>
+          
+            <div class='mb-4 overflow-auto text-sm text-gray-500'>
+  
+    <div class='pl-2 mt-2 border-l-2 border-red-200 hover:border-red-500'>
+      <div><p>“<a href='quotes/allure-of-the-free-lunch' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkBranch'>Allure of the free lunch</a>” (J. Löwy, 2021)</p></div>
+    </div>
+  
+</div>
+          
+        </li>
+      
+        <li>
+          <a class='text-red-600 mavenLinkBold hover:bg-red-50' href='people/juval-lowy/righting-software/designing-software-vs-hardware'>
+            Designing software vs hardware
+          </a>
+          
+            <div class='mb-4 overflow-auto text-sm text-gray-500'>
+  
+    <div class='pl-2 mt-2 border-l-2 border-red-200 hover:border-red-500'>
+      <div><p>Principle of the <a href='quotes/allure-of-the-free-lunch' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Allure of the free lunch</a> still applies here, as well as all the other design principles that engineers such as mechanical engineers have to consider.</p></div>
     </div>
   
 </div>
@@ -3331,9 +3323,9 @@
       <!-- FIXME: The use of -/tags is wrong, because we should use routeUrl using Ema's encoder 
         Perhaps Emanote should inject tagMetas with urls.
       -->
-      <a title='Tag' class='px-1 bg-gray-100 rounded hover:bg-gray-50 hover:text-red-500' href='-/tags/pluralsight'>
+      <a title='Tag' class='px-1 bg-gray-100 rounded hover:bg-gray-50 hover:text-red-500' href='-/tags/stub'>
         <!-- DoNotFormat -->
-        #pluralsight
+        #stub
         <!-- DoNotFormat -->
       </a>
     
