@@ -36,25 +36,25 @@
   mermaid.init(undefined,document.querySelectorAll(".mermaid"));
 </script>
 
-<!-- Prism.js --><link href='https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism-tomorrow.min.css' rel='stylesheet' />
-<!-- Note: Having data-manual attribute so our custom code controls PrismJS, which allows support of Mermaid & Emanote hot-reloads -->
-<script src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js' data-manual></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/plugins/autoloader/prism-autoloader.min.js'></script>
-<script>
-/*
-  Custom code from Emanote to selectively skip class="language-mermaid"
-*/
-(function() {
-  var elements = document.querySelectorAll('pre > code[class*="language"]:not(.language-mermaid)');
-  for (var element of elements) {
-    Prism.highlightElement(element, false);
-  }
-})();
-</script>
+<!-- highlight.js -->
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/hybrid.min.css' />
+<script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js'></script>
+<!-- Include languages that Emanote itself uses -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/languages/haskell.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/languages/nix.min.js'></script>
+<script>hljs.highlightAll();</script>
+
+
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/languages/cpp.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/languages/csharp.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/languages/fsharp.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/languages/go.min.js'></script>
+
 
 
   
-  <link href='tailwind.css?instanceId=16514a0d-89de-4eb7-a188-9a154daf5686' rel='stylesheet' type='text/css' />
+  <link href='tailwind.css?instanceId=ac40a183-8651-4729-8fc5-8032cfc1c7c1' rel='stylesheet' type='text/css' />
 
   <!-- Heist error element -->
   <style>
@@ -3273,7 +3273,7 @@
     <p class='mb-3'>
       Swappiness is a configuration value for the Linux kernel that controls how your kernel will behave when it comes to swap memory. This setting is often referred to as <code class='py-0.5 px-0.5 bg-gray-100'>vm.swappiness</code>. You can obtain your current swappiness value by reading from the <code class='py-0.5 px-0.5 bg-gray-100'>/proc/sys/vm/swappiness</code> file:
     </p>
-  <div class='py-0.5 mb-3 text-sm'><pre><code class='sh language-sh'>$ cat /proc/sys/vm/swappiness
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='console language-console'>$ cat /proc/sys/vm/swappiness
 60</code></pre></div>
     <p class='mb-3'>
       The setting falls in the range <span class='math inline'>\(swappiness \in \mathbb{Z} \cap [0, 100]\)</span>, i.e. in the (inclusive) range of 0 to 100.
@@ -3351,7 +3351,7 @@ file_prio = 200 - anon_prio;</code></pre></div>
     <p class='mb-3'>
       The <code class='py-0.5 px-0.5 bg-gray-100'>sysctl</code> is of great help here. You can change the current swappiness directly without needing to reboot your computer by running:
     </p>
-  <div class='py-0.5 mb-3 text-sm'><pre><code class='sh language-sh'>$ sudo sysctl vm.swappiness=45
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='console language-console'>$ sudo sysctl vm.swappiness=45
 vm.swappiness = 45</code></pre></div>
     <p class='mb-3'>
       The above will take action immediately.
@@ -3364,12 +3364,12 @@ vm.swappiness = 45</code></pre></div>
     <p class='mb-3'>
       To make the swappiness change persitent, you need to save it in such a file. This requires super-user (sudo) access. For example:
     </p>
-  <div class='py-0.5 mb-3 text-sm'><pre><code class='sh language-sh'># Check if swappiness is already set in one of the mentioned files
-$ grep --recursive swappiness /etc/sysctl.conf /etc/sysctl.d
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='bash language-bash'># Check if swappiness is already set in one of the mentioned files
+grep --recursive swappiness /etc/sysctl.conf /etc/sysctl.d
 # no output? =&gt; not specified in any .conf file.
 
 # This assumes you don't have swappiness written down
-$ echo "vm.swappiness=60" | sudo tee /etc/sysctl.d/20_swappiness.conf</code></pre></div><h2 id='references' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>References</h2>
+echo "vm.swappiness=60" | sudo tee /etc/sysctl.d/20_swappiness.conf</code></pre></div><h2 id='references' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>References</h2>
     <ul class='my-3 ml-6 space-y-1 list-disc'>
       
         <li>
@@ -3498,7 +3498,7 @@ $ echo "vm.swappiness=60" | sudo tee /etc/sysctl.d/20_swappiness.conf</code></pr
     </a>
   </div>
   <div>
-    <a href='https://emanote.srid.ca' target='_blank' title='Generated by Emanote 0.6.21.0'>
+    <a href='https://emanote.srid.ca' target='_blank' title='Generated by Emanote 0.6.23.1'>
       <img class='w-6 h-6 hover:text-red-700' src='_emanote-static/emanote-logo.svg' />
     </a>
   </div>
