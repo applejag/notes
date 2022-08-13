@@ -14,7 +14,7 @@ kernel will behave when it comes to swap memory. This setting is often referred
 to as `vm.swappiness`. You can obtain your current swappiness value by reading
 from the `/proc/sys/vm/swappiness` file:
 
-```sh
+```console
 $ cat /proc/sys/vm/swappiness
 60
 ```
@@ -68,7 +68,7 @@ To be clear:
 The `sysctl` is of great help here. You can change the current swappiness
 directly without needing to reboot your computer by running:
 
-```sh
+```console
 $ sudo sysctl vm.swappiness=45
 vm.swappiness = 45
 ```
@@ -83,13 +83,13 @@ default or whatever is written in those files.
 To make the swappiness change persitent, you need to save it in such a file. This
 requires super-user (sudo) access. For example:
 
-```sh
+```bash
 # Check if swappiness is already set in one of the mentioned files
-$ grep --recursive swappiness /etc/sysctl.conf /etc/sysctl.d
+grep --recursive swappiness /etc/sysctl.conf /etc/sysctl.d
 # no output? => not specified in any .conf file.
 
 # This assumes you don't have swappiness written down
-$ echo "vm.swappiness=60" | sudo tee /etc/sysctl.d/20_swappiness.conf
+echo "vm.swappiness=60" | sudo tee /etc/sysctl.d/20_swappiness.conf
 ```
 
 ## References

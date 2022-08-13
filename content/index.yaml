@@ -6,7 +6,8 @@ page:
   headHtml: |
     <snippet var="js.mathjax" />
     <snippet var="js.mermaid" />
-    <snippet var="js.prism" />
+    <snippet var="js.highlightjs" />
+    <snippet var="js.highlightjs-langs" />
 
 template:
   theme: red
@@ -27,3 +28,12 @@ template:
 
   # If you are hosting on GitLab Pages, you may want to remove this.
   urlStrategy: pretty
+
+js:
+  highlightjs-langs: |
+    <with var="js">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/${value:highlightjs-ver}/languages/cpp.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/${value:highlightjs-ver}/languages/csharp.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/${value:highlightjs-ver}/languages/fsharp.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/${value:highlightjs-ver}/languages/go.min.js"></script>
+    </with>
