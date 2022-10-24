@@ -45,3 +45,5 @@ less exciting.
 | Ehrlich | Ärlig
 | Ängstlich | Ängstlig
 | Verstehe | Förstå
+| Sehenwürdigkeiten | Sevärdigheter
+| Träffe | Träffa
