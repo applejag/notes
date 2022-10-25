@@ -47,3 +47,4 @@ less exciting.
 | Verstehe | Förstå
 | Sehenwürdigkeiten | Sevärdigheter
 | Träffe | Träffa
+| Ungefähr | Ungefär
