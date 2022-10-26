@@ -48,3 +48,4 @@ less exciting.
 | Sehenwürdigkeiten | Sevärdigheter
 | Träffe | Träffa
 | Ungefähr | Ungefär
+| Berühmte | Berömda
