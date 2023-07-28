@@ -18,10 +18,10 @@ template:
   editBaseUrl: https://github.com/jilleJr/notes/blob/master/content
 
   # Uncomment to set neuron-style pages
-  #name: /templates/layouts/note
-  #layout:
-  #  note:
-  #    containerClass: container mx-auto max-w-screen-lg
+  name: /templates/layouts/note
+  layout:
+    note:
+      containerClass: container mx-auto max-w-screen-lg
 
   sidebar:
     collapsed: false
