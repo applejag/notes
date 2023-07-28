@@ -1,5 +1,11 @@
 <div class="flex items-center justify-center mt-2">
   <ema:metadata>
+    <ema:metadata>
+      <span id="notedate" class="mr-2 text-right text-gray-600" title="Note creation date">
+        <value var="date" />
+      </span>
+      <script>if (notedate.innerHTML.includes('error')) notedate.innerHTML = ''</script>
+    </ema:metadata>
     <with var="template">
       <a class="text-gray-300 hover:text-${theme}-600 text-sm" title="Edit this page on GitHub"
         href="${value:editBaseUrl}/${ema:note:source-path}">

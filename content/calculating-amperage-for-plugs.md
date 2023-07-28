@@ -1,8 +1,5 @@
 ---
 date: 2021-01-17T21:29
-tags:
-  - life/working with electricity
-  - life/mathmatics of volts
 ---
 
 # Calculating amperage for plugs
