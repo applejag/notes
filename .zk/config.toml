@@ -1,8 +1,9 @@
 # zk configuration file
 
 [note]
-default-title = "untitled"
-filename = "content/{{title}}"
+language = "en"
+default-title = "Untitled"
+filename = "content/{{slug title}}"
 extension = "md"
 template = "default.md"
 
