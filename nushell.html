@@ -1,18 +1,22 @@
+<!DOCTYPE html>
+<!-- TODO: Main navigation links (Home, index, tags, ...) --><!-- DoNotFormat -->
+<!-- DoNotFormat -->
+
 <html lang='en'>
 
 <head>
   <meta charset='UTF-8' />
   <meta name='viewport' content='width=device-width, initial-scale=1' />
   <title>
-    Task Index – Kalle's notes
+    Nushell – Kalle's notes
   </title>
   
     
-      <meta property='og:description' content='My personal notes of stuff worth remembering.' />
+      <meta property='og:description' content='Terminal shell, like bash or zsh' />
       <meta property='og:site_name' content="Kalle's notes" />
       <meta property='og:image' content />
       <meta property='og:type' content='website' />
-      <meta property='og:title' content='Task Index' />
+      <meta property='og:title' content='Nushell' />
     
     
       <base href='/' />
@@ -152,7 +156,9 @@
 </style>
 
 
-  <head-main></head-main>
+  
+    <link rel='stylesheet' href='_emanote-static/inverted-tree.css' />
+  
   <link rel='stylesheet' href='_emanote-static/stork/flat.css' />
 <!-- Custom Stork-search styling for Emanote -->
 <style>
@@ -262,51 +268,240 @@
 
 <body class='bg-gray-400 overflow-y-scroll'>
   
-    <div class='container mx-auto '>
-      <main class='flex-col items-center justify-center mx-2'>
-        <h1 class='pb-2 mt-2 mb-2 text-6xl text-center'>
-          Task Index
-        </h1>
-        <div class='pb-2 mx-auto my-4 lg:max-w-screen-md '>
-          
-    <div class='w-full bg-gray-300'>
-      <div class='w-full px-3 py-1'>
-        
-          
-            <section class='mt-4 mb-6'>
-              <div class='mt-1 mb-2 py-0.5 px-1 rounded flex flex-row-reverse'>
-                
+    <div class='container mx-auto max-w-screen-lg'>
+      <div class='mt-2 md:mt-4'>
+        <!-- DoNotFormat -->
+<!-- DoNotFormat -->
 
-                <div class='flex-1'>
-                  <a class='font-bold text-red-700  hover:underline' href=''>
-                    Kalle’s notes
-                  </a>
-                </div>
-              </div>
-              <div class>
-                
-                  
-                    <div class='bg-white py-1.5 px-2 my-1 rounded shadow border-2 hover:border-red-600'>
-                      <svg xmlns='http://www.w3.org/2000/svg' class='inline h-4 w-4 mb-1 text-gray-600 stroke-current' fill='none' viewBox='0 0 28 28'><desc>☐</desc><rect stroke-width='3' x='2' y='2' width='24' height='24' rx='3'></rect></svg>
-<span>
-  
-                        TODO: Remove all tags I had before. They’re used weirdly
-                      
-</span>
-
-                    </div>
-                  
-                
-              </div>
-            </section>
+<nav id='uptree' class='flipped tree' style='transform-origin: 50%;'>
+  <ul class='root'>
+    <li>
+      
+        <ul>
           
-        
-      </div>
-    </div>
+            <li>
+
+  <div class='text-gray-900 forest-link'>
+    <a href=''>
+      Kalle’s notes
+    </a>
+  </div>
+
   
+</li>
+          
+        </ul>
+      
+    </li>
+  </ul>
+</nav>
+
+        <div class='relative md:shadow-2xl md:mb-8'>
+
+          <div class='absolute -top-6 right-1 md:right-0 flex flex-row items-center justify-center'>
+            <a title='Search (Ctrl+K)' class='cursor-pointer' onclick='window.emanote.stork.toggleSearch()'>
+              <svg xmlns='http://www.w3.org/2000/svg' style='width: 1rem;' class='hover:text-red-700' f
+ fill='none' viewBox='0 0 24 24' stroke='currentColor' stroke-width='2'>
+  <path stroke-linecap='round' stroke-linejoin='round' d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z'></path>
+</svg>
+            </a>
+          </div>
+          <div class='flex-1 w-full overflow-x-auto bg-white'>
+            <main class='px-4 py-4'>
+              <h1 class='flex items-end justify-center mb-4 p-3 bg-red-100 text-5xl font-extrabold text-black rounded'>
+  <a class='z-40 tracking-tighter '>
+    Nushell
+  </a>
+</h1>
+              <article class='overflow-auto'>
+  <!-- What goes in this file will appear on top of note body-->
+  
+    <p class='mb-3'>
+      Terminal shell, like <code class='py-0.5 px-0.5 bg-gray-100'>bash</code> or <code class='py-0.5 px-0.5 bg-gray-100'>zsh</code>
+    </p>
+  <h2 id='pros-1' class='mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Pros <span class='emoji' data-emoji='+1' style='font-family: emoji'>👍</span></h2>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Do math anytime. The <code class='py-0.5 px-0.5 bg-gray-100'>&lt;</code> & <code class='py-0.5 px-0.5 bg-gray-100'>&gt;</code> do mean “less than” and “greater than”, instead of “read from file” and “write to file”
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Type safety
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Rich type system <a href='https://www.nushell.sh/book/types_of_data.html#types-at-a-glance' class='text-red-600 hover:underline' data-linkicon='external' target='_blank' rel='noopener'>(even has records)</a>
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      The way you specify completions for third-party commands looks awesome: <a href='https://www.nushell.sh/book/externs.html' class='text-red-600 hover:underline' data-linkicon='external' target='_blank' rel='noopener'>https://www.nushell.sh/book/externs.html</a>
+    </p>
+  
+    <p class='mb-3'>
+      Like sourcing this just works (no need for special completion registration):
+    </p>
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='python language-python'>def kubectl-contexts [] {
+	open ~/.kube/config | from yaml | get contexts.name
+}
+
+def kubectl-resources [] {
+	kubectl api-resources -o name | lines
+}
+
+def kubectl-namespaces [] {
+	kubectl get ns -o name | lines | split column '/' | get column2
+}
+
+def kubectl-outputs [] {
+	"json|yaml|name|go-template|go-template-file|template|templatefile|jsonpath|jsonpath-as-json|jsonpath-file|custom-columns|custom-columns-file|wide" \
+      | split row '|'
+}
+
+export extern "kubectl get" [
+	resource: string@kubectl-resources          # name of Kubernetes resource
+	--namespace(-n): string@kubectl-namespaces  # show resources from specific Kubernetes namespace
+	--all-namespaces(-A)                        # show resources all Kubernetes namespaces
+	--context: string                           # context from your ~/.kube/config
+	--output(-o): string@kubectl-outputs        # output format
+]</code></pre></div>
+    <p class='mb-3'>
+      It even validates it for me:
+    </p>
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='console language-console'>$ kubectl get -o wide
+Error: nu::parser::missing_positional
+
+  × Missing required positional argument.
+   ╭─[entry #86:1:1]
+ 1 │ kubectl get -o wide
+   ·            ▲
+   ·            ╰── missing resource
+   ╰────
+  help: Usage: kubectl get {flags} &lt;resource&gt;</code></pre></div>
+        </li>
+      
+    </ul>
+  <h2 id='cons--1' class='mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Cons <span class='emoji' data-emoji='-1' style='font-family: emoji'>👎</span></h2>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Quite verbose. E.g:
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <code class='py-0.5 px-0.5 bg-gray-100'>ls */</code> vs <code class='py-0.5 px-0.5 bg-gray-100'>ls | where type == dir</code>
+        </li>
+      
+        <li>
+          <code class='py-0.5 px-0.5 bg-gray-100'>cat file</code> vs <code class='py-0.5 px-0.5 bg-gray-100'>open --raw file</code>
+        </li>
+      
+        <li>
+          <code class='py-0.5 px-0.5 bg-gray-100'>echo foo &gt;&gt; file</code> vs <code class='py-0.5 px-0.5 bg-gray-100'>"foo" | save --raw --append file</code>
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          No dir aliasing (like if I in zsh run <code class='py-0.5 px-0.5 bg-gray-100'>hash -d c=~/code</code>, then I can do <code class='py-0.5 px-0.5 bg-gray-100'>~c/foo</code> to go to <code class='py-0.5 px-0.5 bg-gray-100'>~/code/foo</code>)
+        </li>
+      
+        <li>
+          Can’t parse table output.
+        </li>
+      
+        <li>
+          Can’t really deal with streaming data, such as <code class='py-0.5 px-0.5 bg-gray-100'>kubectl get pods -w | lines</code>
+        </li>
+      
+        <li>
+          Can’t <code class='py-0.5 px-0.5 bg-gray-100'>Ctrl+Z</code> an application, but instead must install third party tool <code class='py-0.5 px-0.5 bg-gray-100'>pueued</code> for this?
+        </li>
+      
+        <li>
+          Too unknown. Completion support for random CLI apps:
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <code class='py-0.5 px-0.5 bg-gray-100'>bash</code>: super common
+        </li>
+      
+        <li>
+          <code class='py-0.5 px-0.5 bg-gray-100'>zsh</code>: quite common (zsh can load bash completions anyway)
+        </li>
+      
+        <li>
+          <code class='py-0.5 px-0.5 bg-gray-100'>fish</code>: uncommon
+        </li>
+      
+        <li>
+          <code class='py-0.5 px-0.5 bg-gray-100'>powershell</code>: uncommon
+        </li>
+      
+        <li>
+          <code class='py-0.5 px-0.5 bg-gray-100'>nushell</code>: non-existent
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          Completions dont work for aliases (for now: <a href='https://github.com/nushell/nushell/issues/8483' class='text-red-600 hover:underline' data-linkicon='external' target='_blank' rel='noopener'>https://github.com/nushell/nushell/issues/8483</a>)
+        </li>
+      
+    </ul>
+  
+
+  <div class='flex items-center justify-center mt-2'>
+  
+    
+      <span id='notedate' class='mr-2 text-right text-gray-600' title='Note creation date'>
+        July 28, 2023
+      </span>
+      <script>if (notedate.innerHTML.includes('error')) notedate.innerHTML = ''</script>
+    
+    
+      <a class='text-gray-300 hover:text-red-600 text-sm' title='Edit this page on GitHub' href='https://github.com/jilleJr/notes/blob/master/content/nushell.md'>
+        <svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
+          <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z'></path>
+        </svg>
+      </a>
+    
+  
+</div>
+
+</article>
+              <div class='flex flex-col lg:flex-row lg:space-x-2'>
+                
+                
+              </div>
+              
+  <section class='flex flex-wrap items-end justify-center my-4 space-x-2 space-y-2 font-mono text-sm'>
+    
+  </section>
+
+              <!-- What goes in this file will at the very end of the main div -->
+            </main>
+          </div>
         </div>
-      </main>
-      <footer class='flex items-center justify-center mt-2 mb-8 space-x-4 text-center text-gray-800'>
+        <footer class='flex items-center justify-center mt-2 mb-8 space-x-4 text-center text-gray-800'>
   
   <div>
     <a href='' title='Go to Home page'>
@@ -344,6 +539,7 @@
     </a>
   </div>
 </footer>
+      </div>
     </div>
   
   <div id='stork-search-container' class='hidden fixed w-screen h-screen inset-0 backdrop-filter backdrop-blur-sm'>
