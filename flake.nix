@@ -1,34 +1,37 @@
 {
-  nixConfig.extra-substituters = "https://cache.garnix.io";
-  nixConfig.extra-trusted-public-keys = "cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g=";
+  nixConfig = {
+    extra-substituters = "https://srid.cachix.org";
+    extra-trusted-public-keys = "srid.cachix.org-1:3clnql5gjbJNEvhA/WQp7nrZlBptwpXnUk6JAv8aB2M=";
+  };
 
   inputs = {
-    emanote.url = "github:EmaApps/emanote";
+    emanote.url = "github:srid/emanote";
     nixpkgs.follows = "emanote/nixpkgs";
-    flake-parts.url = "github:hercules-ci/flake-parts";
-    flake-parts.inputs.nixpkgs.follows = "nixpkgs";
+    flake-parts.follows = "emanote/flake-parts";
   };
 
   outputs = inputs@{ self, flake-parts, nixpkgs, ... }:
-    flake-parts.lib.mkFlake { inherit self; } {
+    flake-parts.lib.mkFlake { inherit inputs; } {
       systems = nixpkgs.lib.systems.flakeExposed;
-      imports = [
-        inputs.emanote.flakeModule
-      ];
+      imports = [ inputs.emanote.flakeModule ];
       perSystem = { self', pkgs, system, ... }: {
         emanote = {
-          package = inputs.emanote.packages.${system}.default;
+          # By default, the 'emanote' flake input is used.
+          # package = inputs.emanote.packages.${system}.default;
           sites."default" = {
-            path = ./content;
-            pathString = "./content";
-            port = 8080;
-            baseUrl = "/";
+            layers = [ ./content ];
+            layersString = [ "./content" ];
+            # port = 8080;
+            baseUrl = "/"; # Change to "/" (or remove it entirely) if using CNAME
             prettyUrls = true;
           };
         };
         devShells.default = pkgs.mkShell {
-          buildInputs = [ pkgs.nixpkgs-fmt ];
+          buildInputs = [
+            pkgs.nixpkgs-fmt
+          ];
         };
+        formatter = pkgs.nixpkgs-fmt;
       };
     };
 }
