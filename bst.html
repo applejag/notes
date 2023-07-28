@@ -1,18 +1,22 @@
+<!DOCTYPE html>
+<!-- TODO: Main navigation links (Home, index, tags, ...) --><!-- DoNotFormat -->
+<!-- DoNotFormat -->
+
 <html lang='en'>
 
 <head>
   <meta charset='UTF-8' />
   <meta name='viewport' content='width=device-width, initial-scale=1' />
   <title>
-    Tag Index – Kalle's notes
+    BST – Kalle's notes
   </title>
   
     
-      <meta property='og:description' content='My personal notes of stuff worth remembering.' />
+      <meta property='og:description' content='Short for: Binary Search Tree' />
       <meta property='og:site_name' content="Kalle's notes" />
       <meta property='og:image' content />
       <meta property='og:type' content='website' />
-      <meta property='og:title' content='Tag Index' />
+      <meta property='og:title' content='BST' />
     
     
       <base href='/' />
@@ -151,7 +155,9 @@
 </style>
 
 
-  <head-main></head-main>
+  
+    <link rel='stylesheet' href='_emanote-static/inverted-tree.css' />
+  
   <link rel='stylesheet' href='_emanote-static/stork/flat.css' />
 <!-- Custom Stork-search styling for Emanote -->
 <style>
@@ -261,56 +267,187 @@
 
 <body class='bg-gray-400 overflow-y-scroll'>
   
-    <div class='container mx-auto '>
-      <main class='flex-col items-center justify-center mx-2'>
-        <h1 class='pb-2 mt-2 mb-2 text-6xl text-center'>
-          Tag Index
-        </h1>
-        <div class='pb-2 mx-auto my-4 lg:max-w-screen-md '>
+    <div class='container mx-auto max-w-screen-lg'>
+      <div class='mt-2 md:mt-4'>
+        <!-- DoNotFormat -->
+<!-- DoNotFormat -->
+
+<nav id='uptree' class='flipped tree' style='transform-origin: 50%;'>
+  <ul class='root'>
+    <li>
+      
+        <ul>
           
-    <div class='bg-gray-200 pb-2'>
-      <nav id='tagcrumbs' class='w-full pl-2 bg-gray-100'>
-        <div class='flex items-center justify-left'>
-          <div class='w-full px-2 py-2 '>
-            <ul class='flex flex-wrap text-lg'>
-              
-              <li class='inline-flex items-center text-black'>
-                <a class='px-1 font-mono'>
-                  /
-                </a>
-              </li>
-            </ul>
+            <li>
+
+  <div class='text-gray-900 forest-link'>
+    <a href=''>
+      Kalle’s notes
+    </a>
+  </div>
+
+  
+</li>
+          
+        </ul>
+      
+    </li>
+  </ul>
+</nav>
+
+        <div class='relative md:shadow-2xl md:mb-8'>
+
+          <div class='absolute -top-6 right-1 md:right-0 flex flex-row items-center justify-center'>
+            <a title='Search (Ctrl+K)' class='cursor-pointer' onclick='window.emanote.stork.toggleSearch()'>
+              <svg xmlns='http://www.w3.org/2000/svg' style='width: 1rem;' class='hover:text-red-700' f
+ fill='none' viewBox='0 0 24 24' stroke='currentColor' stroke-width='2'>
+  <path stroke-linecap='round' stroke-linejoin='round' d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z'></path>
+</svg>
+            </a>
           </div>
-        </div>
-      </nav>
-      <div class='flex flex-col pl-2 my-4 ml-2 space-y-2'>
-        
+          <div class='flex-1 w-full overflow-x-auto bg-white'>
+            <main class='px-4 py-4'>
+              <h1 class='flex items-end justify-center mb-4 p-3 bg-red-100 text-5xl font-extrabold text-black rounded'>
+  <a class='z-40 tracking-tighter '>
+    BST
+  </a>
+</h1>
+              <article class='overflow-auto'>
+  <!-- What goes in this file will appear on top of note body-->
+  
+    <p class='mb-3'>
+      Short for: Binary Search Tree
+    </p>
+  
+    <p class='mb-3'>
+      Data structure is made up of nodes. Usually looks something like this:
+    </p>
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='fsharp language-fsharp'>type bstNode&lt;'T&gt; =
+  { Value: 'T
+    Left: bstNode&lt;'T&gt; option
+    Right: bstNode&lt;'T&gt; option }</code></pre></div><h2 id='rules' class='mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Rules</h2>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Every node can have up to 2 children. No more.
+        </li>
+      
+        <li>
+          Every node in the <code class='py-0.5 px-0.5 bg-gray-100'>.Left</code> branch has a lower value than <code class='py-0.5 px-0.5 bg-gray-100'>.Value</code>
+        </li>
+      
+        <li>
+          Every node in the <code class='py-0.5 px-0.5 bg-gray-100'>.Right</code> branch has a higher (or equal) value than <code class='py-0.5 px-0.5 bg-gray-100'>.Value</code>
+        </li>
+      
+        <li>
+          Every node is immutable
+        </li>
+      
+    </ul>
+  <h2 id='benefits' class='mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Benefits</h2>
+    <p class='mb-3'>
+      Main benefit is the speed of operations.
+    </p>
+  <table class='mb-3'><thead><tr class='border-b-2 border-t-2 border-gray-300'><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Operation</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Average</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Worst</th></tr></thead><tbody><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Add</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><span class='math inline'>\(O(\log n)\)</span></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><span class='math inline'>\(O(n)\)</span></td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Remove</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><span class='math inline'>\(O(\log n)\)</span></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><span class='math inline'>\(O(n)\)</span></td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Find</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><span class='math inline'>\(O(\log n)\)</span></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><span class='math inline'>\(O(n)\)</span></td></tr></tbody></table><h2 id='terminology' class='mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Terminology</h2>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
           
-            <div>
-              <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-                <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z'>
-                </path>
-              </svg>
-              <span class>
-                <a href='-/tags/title' class='font-mono font-bold hover:text-red-700'>
-                  title
-                </a>
-                <span class='font-mono text-sm text-gray-400'>
-                  <!-- DoNotFormat -->
-                      (3+0)
-                      <!-- DoNotFormat -->
-                </span>
-              </span>
-            </div>
+    <p class='mb-3'>
+      A container of a single value and pointers to the next containers is called a <em>“node”</em>.
+    </p>
+  
+        </li>
+      
+        <li>
           
-        
-        
-      </div>
+    <p class='mb-3'>
+      The nodes referenced by a node are called <em>“child nodes”</em> and <em>“parent nodes”</em>
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      The <code class='py-0.5 px-0.5 bg-gray-100'>D</code> node lacks parent, and is therefore called the <em>“root node”</em>.
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      The <code class='py-0.5 px-0.5 bg-gray-100'>A</code>, <code class='py-0.5 px-0.5 bg-gray-100'>C</code>, <code class='py-0.5 px-0.5 bg-gray-100'>E</code>, <code class='py-0.5 px-0.5 bg-gray-100'>G</code> nodes lacks children, and is therefore are called the <em>“leaf nodes”</em>.
+    </p>
+  
+        </li>
+      
+    </ul>
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='mermaid language-mermaid'>graph TD
+    D==&gt;B
+    D==&gt;F
+    B==&gt;A
+    B==&gt;C
+    F==&gt;E
+    F==&gt;G</code></pre></div>
+
+  <div class='flex items-center justify-center mt-2'>
+  
+    
+      <span id='notedate' class='mr-2 text-right text-gray-600' title='Note creation date'>
+        2021-04-22T20:04
+      </span>
+      <script>if (notedate.innerHTML.includes('error')) notedate.innerHTML = ''</script>
+    
+    
+      <a class='text-gray-300 hover:text-red-600 text-sm' title='Edit this page on GitHub' href='https://github.com/jilleJr/notes/blob/master/content/bst.md'>
+        <svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
+          <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z'></path>
+        </svg>
+      </a>
+    
+  
+</div>
+
+</article>
+              <div class='flex flex-col lg:flex-row lg:space-x-2'>
+                
+                
+  <div class='flex-1 p-4 mt-8 bg-gray-100 rounded'>
+    <header class='mb-2 text-xl font-semibold text-gray-500'>Links to this page</header>
+    <ul class='space-y-1'>
+      
+        <li>
+          <a class='text-red-600 mavenLinkBold hover:bg-red-50' href='binary-search-tree-removing-a-node'>
+            BST - Removing a node
+          </a>
+          
+            <div class='mb-4 overflow-auto text-sm text-gray-500'>
+  
+    <div class='pl-2 mt-2 border-l-2 border-red-200 hover:border-red-500'>
+      <div><p>Here it gets a little more complicated as we need to conform to the rules defined for a <a href='bst' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>BST</a>.</p></div>
     </div>
   
+</div>
+          
+        </li>
+      
+    </ul>
+  </div>
+
+              </div>
+              
+  <section class='flex flex-wrap items-end justify-center my-4 space-x-2 space-y-2 font-mono text-sm'>
+    
+  </section>
+
+              <!-- What goes in this file will at the very end of the main div -->
+            </main>
+          </div>
         </div>
-      </main>
-      <footer class='flex items-center justify-center mt-2 mb-8 space-x-4 text-center text-gray-800'>
+        <footer class='flex items-center justify-center mt-2 mb-8 space-x-4 text-center text-gray-800'>
   
   <div>
     <a href='' title='Go to Home page'>
@@ -348,6 +485,7 @@
     </a>
   </div>
 </footer>
+      </div>
     </div>
   
   <div id='stork-search-container' class='hidden fixed w-screen h-screen inset-0 backdrop-filter backdrop-blur-sm'>
