@@ -2,7 +2,7 @@
 
 [note]
 default-title = "untitled"
-filename = "{{title}}"
+filename = "content/{{title}}"
 extension = "md"
 template = "default.md"
 
