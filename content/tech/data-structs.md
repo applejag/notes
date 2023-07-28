@@ -1,5 +1,0 @@
-# Data structures
-
-```query
-path: ./*
-```

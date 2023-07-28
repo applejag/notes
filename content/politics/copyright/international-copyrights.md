@@ -1,4 +1,0 @@
-# International copyrights
-
-- [ ] TODO
-

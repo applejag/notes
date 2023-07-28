@@ -1,5 +1,0 @@
-# Linux
-
-```query
-path: ./*
-```

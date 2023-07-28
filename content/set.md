@@ -1,8 +1,5 @@
 ---
 date: 2021-05-05T19:27
-tags:
-  - pluralsight
-  - math
 ---
 
 # Set

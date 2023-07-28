@@ -1,7 +1,5 @@
 ---
 date: 2021-04-22T20:04
-tags:
-  - pluralsight
 ---
 
 # BST
@@ -38,7 +36,7 @@ Main benefit is the speed of operations.
 
 - A container of a single value and pointers to the next containers is called a
   *"node"*.
-  
+
 - The nodes referenced by a node are called *"child nodes"* and
   *"parent nodes"*
 
@@ -47,7 +45,7 @@ Main benefit is the speed of operations.
 - The `A`, `C`, `E`, `G` nodes lacks children, and is therefore are called the
   *"leaf nodes"*.
 
-```{.mermaid}
+```mermaid
 graph TD
     D==>B
     D==>F
