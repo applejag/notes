@@ -1,7 +1,5 @@
 ---
 date: 2021-01-28T19:03
-tags: 
-  - book/author
 ---
 
 # Juval Löwy
@@ -10,22 +8,17 @@ System architect, and a really good one at that.
 
 ## Known for
 
-- "[[righting-software]]#", name on his courses, masters, workshops, and more.
-  All orienting around teaching out the *proper* way to design system, as in his
-  words *"the entire software world is broken"*, because everyone is doing it
-  wrong.
+- "Righting Software", name on his courses, masters, workshops, and more.
+
+- Always says *"the entire software world is broken"*
 
 - Nominated "Software legend" by Microsoft, a title only 6 people has received.
 
 - Played a big role in designing and reviewing C# and WCF.
 
-- Brought .NET into microservices via WCF.
-
-- Founder of IDesign.
-
 ## Famous quotes
 
-> "[[allure-of-the-free-lunch]]#" (J. Löwy, 2021)
+> "Allure of the free lunch" (J. Löwy, 2021)
 
 > "Everyone is doing software wrong, until they have met me" (J. Löwy, 2021)
 
