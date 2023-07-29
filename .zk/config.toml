@@ -26,7 +26,7 @@ link-format = "[[{{filename}}]]"
 # environment variables are used.
 editor = "nvim"
 #fzf-preview = "bat -p --color always {-1}"
-fzf-preview = "glow --style=dark --width=$((FZF_PREVIEW_COLUMNS-1)) {-1}"
+fzf-preview = "glow --style=dark --width=$((FZF_PREVIEW_COLUMNS-2)) {-1}"
 
 [lsp.diagnostics]
 # Each diagnostic can have for value: none, hint, info, warning, error
