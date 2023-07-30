@@ -4,7 +4,7 @@ date: 2021-04-22T20:04
 
 # BST - Enumeration
 
-How to enumerate (list through) elements in a [[#bst]].
+How to enumerate (list through) elements in a #[[bst]].
 
 You can enumerate a binary search tree in basically 3 ways. They all orient
 around the order of recursive descent and value retrieval.
