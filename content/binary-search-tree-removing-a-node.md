@@ -4,7 +4,7 @@ date: 2021-04-22T20:04
 
 # BST - Removing a node
 
-How to remove a node in a [[#bst]].
+How to remove a node in a #[[bst]].
 
 The actions you need to take when removing a node depends on the state of the
 soon-to-be-removed node.
