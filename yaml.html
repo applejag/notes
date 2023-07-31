@@ -8,15 +8,15 @@
   <meta charset='UTF-8' />
   <meta name='viewport' content='width=device-width, initial-scale=1' />
   <title>
-    Information wants to be free – Kalle's notes
+    YAML – Kalle's notes
   </title>
   
     
-      <meta property='og:description' content='Full quote:' />
+      <meta property='og:description' content='Nice website comparing v1.1 & v1.2: https://perlpunk.github.io/yaml-test-schema/schemas.html' />
       <meta property='og:site_name' content="Kalle's notes" />
       <meta property='og:image' content />
       <meta property='og:type' content='website' />
-      <meta property='og:title' content='Information wants to be free' />
+      <meta property='og:title' content='YAML' />
     
     
       <base href='/' />
@@ -310,67 +310,44 @@
             <main class='px-4 py-4'>
               <h1 class='flex items-end justify-center mb-4 p-3 bg-red-100 text-5xl font-extrabold text-black rounded'>
   <a class='z-40 tracking-tighter '>
-    Information wants to be free
+    YAML
   </a>
 </h1>
               <article class='overflow-auto'>
   <!-- What goes in this file will appear on top of note body-->
-  
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='yaml language-yaml'>YAML: YAML Ain't Markup Language™</code></pre></div><h2 id='version-differences' class='mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Version differences</h2><table class='mb-3'><thead><tr class='border-b-2 border-t-2 border-gray-300'><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Feature</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>YAML 1.1</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>YAML 1.2</th></tr></thead><tbody><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Booleans “on/off” & “yes/no”</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✅</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>❌</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Octals “0700”</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✅</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>❌</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Octals “0o700”</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>❌</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✅</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Base-60 (sexagesimal) “190:20:30”</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✅</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>❌</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Underscores in numbers “1_2_3”</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✅</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>❌</td></tr></tbody></table>
     <p class='mb-3'>
-      Full quote:
+      Nice website comparing v1.1 & v1.2: <a href='https://perlpunk.github.io/yaml-test-schema/schemas.html' class='text-red-600 hover:underline' data-linkicon='external' target='_blank' rel='noopener'>https://perlpunk.github.io/yaml-test-schema/schemas.html</a>
     </p>
-  
-    <blockquote class='py-0.5 px-4 mb-3 italic border-l-4 bg-gray-50 text-gray-600 border-gray-400 quote'>
-      
-    <p class='mb-3'>
-      “On the one hand <strong>information wants to be expensive</strong>, because it’s so valuable. The right information in the right place just changes your life.
-    </p>
-  
-    <p class='mb-3'>
-      On the other hand, <strong>information wants to be free</strong>, because the cost of getting it out is getting lower and lower all the time. So you have these two fighting against each other.“
-    </p>
-  
+  <h2 id='weird-syntax' class='mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Weird syntax</h2><h3 id='null' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Null</h3><div class='py-0.5 mb-3 text-sm'><pre><code class='yaml language-yaml'>a: null
+b: !!null null
+c:              # empty also means null
+d: ~            # tilde also means null</code></pre></div><h3 id='sets' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Sets</h3><div class='py-0.5 mb-3 text-sm'><pre><code class='yaml language-yaml'>a: { x, y, z }
+b: { x:, y:, z: }
+c: { x: null, y: null, z: null }
+d:
+  ? x
+  ? y
+  ? z</code></pre></div><h2 id='cool-facts' class='mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Cool facts</h2>
     <ul class='my-3 ml-6 space-y-1 list-disc'>
       
         <li>
-          Stewart Brand
-    <sup class='px-0.5'>
-      <a class='text-red-600 hover:underline' href='information-wants-to-be-free#fn1'>
-        1
-      </a>
-    </sup>
-  
+          Their website is YAML: <a href='https://yaml.org' class='text-red-600 hover:underline' data-linkicon='external' target='_blank' rel='noopener'>https://yaml.org</a>
         </li>
       
     </ul>
-  
-    </blockquote>
-  
-    <div title='Footnotes' class='pt-2 mt-8 space-y-1 text-gray-500 transform scale-x-90 border-t-2'>
-      <header class='font-semibold'>Footnotes</header>
-      
-        <div id='fn1'>
-          <header class='italic'>
-            1.
-          </header>
-          <div class='inline-block mb-2 ml-4'>
-            Mentioned in “Crash Course: Intellectual Property” on CuriosityStream (<a href='https://curiositystream.com/video/5684' class='text-red-600 hover:underline' data-linkicon='external' target='_blank' rel='noopener'>https://curiositystream.com/video/5684</a>)
-          </div>
-        </div>
-      
-    </div>
   
 
   <div class='flex items-center justify-center mt-2'>
   
     
       <span id='notedate' class='mr-2 text-right text-gray-600' title='Note creation date'>
-        <strong class='error'>expression error: can't find "date" in JSON object (&lt;value&gt; tag)</strong>
+        July 31, 2023
       </span>
       <script>if (notedate.innerHTML.includes('error')) notedate.innerHTML = ''</script>
     
     
-      <a class='text-gray-300 hover:text-red-600 text-sm' title='Edit this page on GitHub' href='https://github.com/jilleJr/notes/blob/master/content/information-wants-to-be-free.md'>
+      <a class='text-gray-300 hover:text-red-600 text-sm' title='Edit this page on GitHub' href='https://github.com/jilleJr/notes/blob/master/content/yaml.md'>
         <svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
           <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z'></path>
         </svg>
