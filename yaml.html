@@ -58,7 +58,7 @@
 
 
   
-  <link href='tailwind.css?instanceId=f5e81723-ff4d-44ea-899e-6cb009ffa2aa' rel='stylesheet' type='text/css' />
+  <link href='tailwind.css?instanceId=28ae9afa-1db1-4739-b05c-c7336b4cf349' rel='stylesheet' type='text/css' />
 
   <style>
     /* Heist error element */
@@ -328,7 +328,47 @@ c: { x: null, y: null, z: null }
 d:
   ? x
   ? y
-  ? z</code></pre></div><h2 id='cool-facts' class='mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Cool facts</h2>
+  ? z</code></pre></div><h3 id='merge-keys' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Merge keys</h3>
+    <p class='mb-3'>
+      <a href='https://yaml.org/type/merge.html' class='text-red-600 hover:underline' data-linkicon='external' target='_blank' rel='noopener'>https://yaml.org/type/merge.html</a>
+    </p>
+  
+    <p class='mb-3'>
+      Introduced in v1.1
+    </p>
+  <div xmlhtmlRaw><table class="table-auto w-full"><tbody><tr><td class="w-1/2">
+</div><div class='py-0.5 mb-3 text-sm'><pre><code class='yaml language-yaml'>a: &amp;a
+  foo: 1
+b: &amp;b
+  bar: 2
+c: &amp;c
+  foo: 3
+d:
+  &lt;&lt;: *a
+  moo: 3
+e:
+  &lt;&lt;: *a
+  foo: 4
+  &lt;&lt;: *c
+f:
+  &lt;&lt;: [*a, *c]</code></pre></div><div xmlhtmlRaw></td><td>
+</div><div class='py-0.5 mb-3 text-sm'><pre><code class='yaml language-yaml'># Result
+a:
+  foo: 1
+b:
+  bar: 2
+c:
+  foo: 3
+d:
+  foo: 1
+  moo: 3
+e:
+  foo: 3
+f:
+  foo: 1
+
+</code></pre></div><div xmlhtmlRaw></td></td></tbody></table>
+</div><h2 id='cool-facts' class='mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Cool facts</h2>
     <ul class='my-3 ml-6 space-y-1 list-disc'>
       
         <li>
