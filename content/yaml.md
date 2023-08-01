@@ -43,6 +43,55 @@ d:
   ? z
 ```
 
+### Merge keys
+
+<https://yaml.org/type/merge.html>
+
+Introduced in v1.1
+
+<table class="table-auto w-full"><tbody><tr><td class="w-1/2">
+
+```yaml
+a: &a
+  foo: 1
+b: &b
+  bar: 2
+c: &c
+  foo: 3
+d:
+  <<: *a
+  moo: 3
+e:
+  <<: *a
+  foo: 4
+  <<: *c
+f:
+  <<: [*a, *c]
+```
+
+</td><td>
+
+```yaml
+# Result
+a:
+  foo: 1
+b:
+  bar: 2
+c:
+  foo: 3
+d:
+  foo: 1
+  moo: 3
+e:
+  foo: 3
+f:
+  foo: 1
+
+
+```
+
+</td></td></tbody></table>
+
 ## Cool facts
 
 - Their website is YAML: <https://yaml.org>
