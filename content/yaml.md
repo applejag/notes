@@ -8,6 +8,28 @@ date: July 31, 2023
 YAML: YAML Ain't Markup Language™
 ```
 
+## Origin
+
+```mermaid
+flowchart TB
+    SGML["Standard Generalized Markup Language (SGML)"] --> XML
+    XML["Extensible Markup Language (XML)"] --> SML
+    SML["Simple Markup Language (SML)"] --> YAML
+    YAML["YAML Ain't Markup Language (YAML)"] -..-|happened to have similar syntax| similar
+    subgraph similar[similar object notation]
+        direction TB
+        JSON
+        Python
+        NewtonScript
+    end
+```
+
+## Names
+
+- YML - The Why Markup Language (source: [mail thread from 1999](https://raw.githubusercontent.com/yaml/sml-dev-archive/master/sml-dev.txt))
+- Originally “Yet Another Markup Language”
+- Nowadays “YAML Ain't Markup Language” (recursive acronym)
+
 ## Version differences
 
 | Feature                           | YAML 1.1 | YAML 1.2 |
