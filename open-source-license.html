@@ -8,15 +8,15 @@
   <meta charset='UTF-8' />
   <meta name='viewport' content='width=device-width, initial-scale=1' />
   <title>
-    BST - Enumeration – Kalle's notes
+    Open Source license – Kalle's notes
   </title>
   
     
-      <meta property='og:description' content='How to enumerate (list through) elements in a [[bst]].' />
+      <meta property='og:description' content='JSON uses an ethical license version of the MIT/Expat license. It contains the string:https://www.youtube.com/watch?v=-C-JoyNuQJshttps://github.com/douglascrockford/JSON-c/blob/bb3e8d18a33e8335619519e62462c666370e232d/utf8_decode.c#L18' />
       <meta property='og:site_name' content="Kalle's notes" />
       <meta property='og:image' content />
       <meta property='og:type' content='website' />
-      <meta property='og:title' content='BST - Enumeration' />
+      <meta property='og:title' content='Open Source license' />
     
     
       <base href='/' />
@@ -282,26 +282,11 @@
             <li>
 
   <div class='text-gray-900 forest-link'>
-    <a href='bst'>
-      BST
-    </a>
-  </div>
-
-  
-    <ul>
-      
-        <li>
-
-  <div class='text-gray-900 forest-link'>
     <a href=''>
       Kalle’s notes
     </a>
   </div>
 
-  
-</li>
-      
-    </ul>
   
 </li>
           
@@ -325,129 +310,78 @@
             <main class='px-4 py-4'>
               <h1 class='flex items-end justify-center mb-4 p-3 bg-red-100 text-5xl font-extrabold text-black rounded'>
   <a class='z-40 tracking-tighter '>
-    BST - Enumeration
+    Open Source license
   </a>
 </h1>
               <article class='overflow-auto'>
   <!-- What goes in this file will appear on top of note body-->
-  
-    <p class='mb-3'>
-      How to enumerate (list through) elements in a <a href='bst' class='text-red-600 mavenLinkBold hover:underline' data-wikilink-type='WikiLinkTag'>BST</a>.
-    </p>
-  
-    <p class='mb-3'>
-      You can enumerate a binary search tree in basically 3 ways. They all orient around the order of recursive descent and value retrieval.
-    </p>
-  
-    <p class='mb-3'>
-      To find all the values in a tree of such nodes, you could mix the order of retrieving the values of:
-    </p>
-  
+  <h2 id='ethical-licenses' class='mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Ethical licenses</h2>
     <ul class='my-3 ml-6 space-y-1 list-disc'>
       
         <li>
-          <code class='py-0.5 px-0.5 bg-gray-100'>.Value</code>,
-        </li>
+          
+    <p class='mb-3'>
+      JSON uses an “ethical license” version of the MIT/Expat license. It contains the string:
+    <sup class='px-0.5'>
+      <a class='text-red-600 hover:underline' href='open-source-license#fn1'>
+        1
+      </a>
+    </sup>
+  
+    <sup class='px-0.5'>
+      <a class='text-red-600 hover:underline' href='open-source-license#fn2'>
+        2
+      </a>
+    </sup>
+  
+    </p>
+  
+    <blockquote class='py-0.5 px-4 mb-3 italic border-l-4 bg-gray-50 text-gray-600 border-gray-400 quote'>
       
-        <li>
-          <code class='py-0.5 px-0.5 bg-gray-100'>.Left</code>, <em>and</em>
-        </li>
-      
-        <li>
-          <code class='py-0.5 px-0.5 bg-gray-100'>.Right</code>
-        </li>
-      
-    </ul>
-  <h2 id='sample-tree' class='mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Sample tree</h2>
     <p class='mb-3'>
-      Will be referenced in the following ordering examples.
+      “The Software shall be used for Good, not Evil.”
     </p>
-  <div class='py-0.5 mb-3 text-sm'><pre><code class='mermaid language-mermaid'>graph TD
-    D==&gt;B
-    D==&gt;F
-    B==&gt;A
-    B==&gt;C
-    F==&gt;E
-    F==&gt;G</code></pre></div><h2 id='pre-ordering' class='mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>“Pre”-ordering</h2>
-    <p class='mb-3'>
-      Ordering for enumeration goes: <code class='py-0.5 px-0.5 bg-gray-100'>.Value</code> -&gt; <code class='py-0.5 px-0.5 bg-gray-100'>.Left</code> -&gt; <code class='py-0.5 px-0.5 bg-gray-100'>.Right</code>
-    </p>
-  <div class='py-0.5 mb-3 text-sm'><pre><code class='text language-text'>1 root --------------- .Value =&gt; 'D'
-    |
-2   +- .Left --------- .Value =&gt; 'B'
-    |     |
-3   |     +- .Left --- .Value =&gt; 'A'
-    |     |
-4   |     \- .Right -- .Value =&gt; 'C'
-    |
-5   \- .Right -------- .Value =&gt; 'F'
-          |
-6         +- .Left --- .Value =&gt; 'E'
-          |
-7         \- .Right -- .Value =&gt; 'G'</code></pre></div>
-    <p class='mb-3'>
-      Useful when copying the tree. If we add each of the enumerated values to a newly created tree then we will get an exact copy of the tree, with every node in the exact same place as it was before.
-    </p>
-  <h2 id='in-ordering' class='mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>“In”-ordering</h2>
-    <p class='mb-3'>
-      Ordering for enumeration goes: <code class='py-0.5 px-0.5 bg-gray-100'>.Left</code> -&gt; <code class='py-0.5 px-0.5 bg-gray-100'>.Value</code> -&gt; <code class='py-0.5 px-0.5 bg-gray-100'>.Right</code>
-    </p>
-  <div class='py-0.5 mb-3 text-sm'><pre><code class='text language-text'>1         /- .Left -- .Value =&gt; 'A'
-          |
-2   /- .Left -------- .Value =&gt; 'B'
-    |     |
-3   |     \- .Right - .Value =&gt; 'C'
-    |
-4 root -------------- .Value =&gt; 'D'
-    |
-5   |     /- .Left -- .Value =&gt; 'E'
-    |     |
-6   \- .Right ------- .Value =&gt; 'F'
-          |
-7         \- .Right - .Value =&gt; 'G'</code></pre></div>
-    <p class='mb-3'>
-      Useful when you need to enumerate the tree in order. Quite the fitting name. This is usually the default enumeration order.
-    </p>
-  <h2 id='post-ordering' class='mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>“Post”-ordering</h2>
-    <p class='mb-3'>
-      Ordering for enumeration goes: <code class='py-0.5 px-0.5 bg-gray-100'>.Left</code> -&gt; <code class='py-0.5 px-0.5 bg-gray-100'>.Right</code> -&gt; <code class='py-0.5 px-0.5 bg-gray-100'>.Value</code>
-    </p>
-  <div class='py-0.5 mb-3 text-sm'><pre><code class='text language-text'>1         /- .Left --- .Value =&gt; 'A'
-          |
-2         +- .Right -- .Value =&gt; 'C'
-          |
-3   /- .Left --------- .Value =&gt; 'B'
-    |
-4   |     /- .Left --- .Value =&gt; 'E'
-    |     |
-5   |     +- .Right -- .Value =&gt; 'G'
-    |     |
-6   +- .Right -------- .Value =&gt; 'F'
-    |
-7 root --------------- .Value =&gt; 'D'</code></pre></div>
-    <p class='mb-3'>
-      Useful when deleting/clearing up a tree or a branch. Deleting in this order will ensure you are always deleting leaf nodes, and will therefore save some performance on not needing to move nodes around during deletion.
-    </p>
-  <h2 id='reference' class='mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Reference</h2>
-    <ul class='my-3 ml-6 space-y-1 list-disc'>
-      
-        <li>
-          Robert Horvick (2020, June 16). <em>Algorithms and Data Structures - Part 1</em> [Course]. Pluralsight. <a href='https://www.pluralsight.com/courses/algorithms-data-structures-part-one' class='text-red-600 hover:underline' data-linkicon='external' target='_blank' rel='noopener'>https://www.pluralsight.com/courses/algorithms-data-structures-part-one</a>
+  
+    </blockquote>
+  
         </li>
       
     </ul>
+  
+    <div title='Footnotes' class='pt-2 mt-8 space-y-1 text-gray-500 transform scale-x-90 border-t-2'>
+      <header class='font-semibold'>Footnotes</header>
+      
+        <div id='fn1'>
+          <header class='italic'>
+            1.
+          </header>
+          <div class='inline-block mb-2 ml-4'>
+            <a href='https://www.youtube.com/watch?v=-C-JoyNuQJs' class='text-red-600 hover:underline' data-linkicon='external' target='_blank' rel='noopener'>https://www.youtube.com/watch?v=-C-JoyNuQJs</a>
+          </div>
+        </div>
+      
+        <div id='fn2'>
+          <header class='italic'>
+            2.
+          </header>
+          <div class='inline-block mb-2 ml-4'>
+            <a href='https://github.com/douglascrockford/JSON-c/blob/bb3e8d18a33e8335619519e62462c666370e232d/utf8_decode.c#L18' class='text-red-600 hover:underline' data-linkicon='external' target='_blank' rel='noopener'>https://github.com/douglascrockford/JSON-c/blob/bb3e8d18a33e8335619519e62462c666370e232d/utf8_decode.c#L18</a>
+          </div>
+        </div>
+      
+    </div>
   
 
   <div class='flex items-center justify-center mt-2'>
   
     
       <span id='notedate' class='mr-2 text-right text-gray-600' title='Note creation date'>
-        2021-04-22T20:04
+        August 02, 2023
       </span>
       <script>if (notedate.innerHTML.includes('error')) notedate.innerHTML = ''</script>
     
     
-      <a class='text-gray-300 hover:text-red-600 text-sm' title='Edit this page on GitHub' href='https://github.com/jilleJr/notes/blob/master/content/binary-search-tree-enumeration.md'>
+      <a class='text-gray-300 hover:text-red-600 text-sm' title='Edit this page on GitHub' href='https://github.com/jilleJr/notes/blob/master/content/open-source-license.md'>
         <svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
           <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z'></path>
         </svg>
@@ -460,28 +394,6 @@
               <div class='flex flex-col lg:flex-row lg:space-x-2'>
                 
                 
-  <div class='flex-1 p-4 mt-8 bg-gray-100 rounded'>
-    <header class='mb-2 text-xl font-semibold text-gray-500'>Links to this page</header>
-    <ul class='space-y-1'>
-      
-        <li>
-          <a class='text-red-600 mavenLinkBold hover:bg-red-50' href='binary-search-tree-removing-a-node'>
-            BST - Removing a node
-          </a>
-          
-            <div class='mb-4 overflow-auto text-sm text-gray-500'>
-  
-    <div class='pl-2 mt-2 border-l-2 border-red-200 hover:border-red-500'>
-      <div><p>Just remove it. The tree will not be affected. This is why the “post-ordering” enumeration is so great, as explained in <a href='binary-search-tree-enumeration' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>BST - Enumeration</a>.</p></div>
-    </div>
-  
-</div>
-          
-        </li>
-      
-    </ul>
-  </div>
-
               </div>
               
   <section class='flex flex-wrap items-end justify-center my-4 space-x-2 space-y-2 font-mono text-sm'>
