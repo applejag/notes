@@ -1,5 +1,5 @@
 ---
-date: 2021-01-28T19:03
+date: January 1, 2021
 ---
 
 # Juval Löwy

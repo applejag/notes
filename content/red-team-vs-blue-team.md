@@ -1,9 +1,5 @@
 ---
-date: 2020-02-18T20:22
-tags:
-  - title/penetration tester
-  - title/security analyst
-  - title/incident responder
+date: February 2, 2020
 ---
 
 # Red team vs blue team

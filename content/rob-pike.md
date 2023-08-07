@@ -1,5 +1,5 @@
 ---
-date: 2021-02-08T19:15
+date: February 8, 2021
 ---
 
 # Rob Pike

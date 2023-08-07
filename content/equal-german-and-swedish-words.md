@@ -1,5 +1,5 @@
 ---
-date: 2022-09-23
+date: September 23, 2022
 ---
 
 # Equal German and Swedish words

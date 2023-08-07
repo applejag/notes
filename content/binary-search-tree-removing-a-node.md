@@ -1,5 +1,5 @@
 ---
-date: 2021-04-22T20:04
+date: April 22, 2021
 ---
 
 # BST - Removing a node
