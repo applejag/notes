@@ -58,7 +58,7 @@
 
 
   
-  <link href='tailwind.css?instanceId=8d64f3b6-4ad2-43b7-887c-7fea7a9d5bae' rel='stylesheet' type='text/css' />
+  <link href='tailwind.css?instanceId=7b1ce17f-086a-409f-8614-dbdda0b6461a' rel='stylesheet' type='text/css' />
 
   <style>
     /* Heist error element */
@@ -419,7 +419,18 @@
       <span id='notedate' class='mr-2 text-right text-gray-600' title='Note creation date'>
         August 03, 2023
       </span>
-      <script>if (notedate.innerHTML.includes('error')) notedate.innerHTML = ''</script>
+      <script>
+        if (notedate.innerHTML.includes('error')) {
+          notedate.innerHTML = ''
+        } else {
+          try {
+            const date = new Date(notedate.innerText);
+            if (!isNaN(date.getTime())) {
+              notedate.innerHtml = date.toLocaleDateString();
+            }
+          } catch {}
+        }
+      </script>
     
     
       <a class='text-gray-300 hover:text-red-600 text-sm' title='Edit this page on GitHub' href='https://github.com/jilleJr/notes/blob/master/content/container-runtime.md'>
