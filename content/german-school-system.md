@@ -6,10 +6,10 @@ date: August 07, 2023
 
 ```mermaid
 flowchart TB
-    Kita --> Kindergarten --> Grundschule
-    Grundschule --> Hauptschule & Realschule & Gesamtschule & Gymnasium
+    Kita["Kita 0-3J"] --> Kindergarten["Kindergarten 3-6J"] --> Grundschule["Grundschule 6-10J\n(mandatory)"]
+    Grundschule --> Hauptschule & Realschule & Gesamtschule & Gymnasium["Gymnasium 8-9J"]
     Hauptschule & Realschule --> Berufschule
-    Gesamtschule & Gymnasium --> Universität
+    Gesamtschule & Gymnasium -->|Abitur| Universität
 
     Berufschule --> Berufschule-arbeit
     subgraph Berufschule-arbeit
