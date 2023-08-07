@@ -11,7 +11,7 @@
           try {
             const date = new Date(notedate.innerText);
             if (!isNaN(date.getTime())) {
-              notedate.innerHtml = date.toLocaleDateString();
+              notedate.innerHTML = date.toLocaleDateString();
             }
           } catch {}
         }
