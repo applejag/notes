@@ -58,7 +58,7 @@
 
 
   
-  <link href='tailwind.css?instanceId=bc524dd3-823e-4ec9-9f6d-778aa260b2b6' rel='stylesheet' type='text/css' />
+  <link href='tailwind.css?instanceId=f0f6d3b5-16e1-41b7-b01e-9fbd5e71c659' rel='stylesheet' type='text/css' />
 
   <style>
     /* Heist error element */
@@ -316,10 +316,11 @@
               <article class='overflow-auto'>
   <!-- What goes in this file will appear on top of note body-->
   <div class='py-0.5 mb-3 text-sm'><pre><code class='mermaid language-mermaid'>flowchart TB
-    Kita["Kita 1-6J"] & Kindergarten["Kindergarten 3-6J"] --&gt; Grundschule["Grundschule 6-10J\n(mandatory)"]
+    Kita["Kita 1-6J"] & Kindergarten["Kindergarten 3-6J"] --&gt; Vorschule --&gt; Grundschule["Grundschule 6-10J\n(mandatory)"]
     Grundschule --&gt; Hauptschule & Realschule & Gesamtschule & Gymnasium["Gymnasium 8-9J"]
-    Hauptschule & Realschule --&gt; Berufschule
+    Hauptschule & Realschule --&gt; Berufschule --&gt; Universität
     Gesamtschule & Gymnasium --&gt;|Abitur| Universität
+    Gesamtschule & Gymnasium --&gt; Berufschule
 
     Berufschule --&gt; Berufschule-arbeit
     subgraph Berufschule-arbeit
